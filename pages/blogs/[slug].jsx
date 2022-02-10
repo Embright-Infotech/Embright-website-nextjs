@@ -203,7 +203,7 @@ export default function Blog({ blogData }) {
 
 export async function getServerSideProps({ params }) {
   const data = await fetch(
-    `${process.env.API_URL}/embright-blogs?id=${params.slug}`
+    `${process.env.STRAPI_URL}/embright-blogs?id=${params.slug}`
   );
   const blogData = await data.json();
 
